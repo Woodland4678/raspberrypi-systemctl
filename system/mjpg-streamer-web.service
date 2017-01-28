@@ -1,0 +1,13 @@
+[Unit]
+Description=MJPG_Streamer_Web
+
+[Service]
+EnvironmentFile=-/etc/default/mjpg-streamer-usb
+ExecStart=/usr/local/bin/mjpg_streamer -o "output_http.so -w /home/pi/vision/mjpg-streamer/mjpg-streamer-experimental/www -p 1181" -i $INPUT
+IgnoreSIGPIPE=false
+KillMode=process
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

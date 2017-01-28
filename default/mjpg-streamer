@@ -1,0 +1,2 @@
+LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+INPUT='"input_raspicam.so -fps 15 -x 320 -y 240 -br 60 -ex off -rot 0"'

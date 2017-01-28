@@ -1,0 +1,15 @@
+[Unit]
+Description=GRIP
+Requires=mjpg-streamer.service
+After=mjpg-streamer.service
+
+[Service]
+EnvironmentFile=-/etc/default/grip
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/bin/java -Xmx50m -XX:-OmitStackTraceInFastThrow -XX:+HeapDumpOnOutOfMemoryError -jar $JAR_PATH $GRIP_PATH
+IgnoreSIGPIPE=false
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+LD_LIBRARY_PATH=/home/pi/vision/grip:$LD_LIBRARY_PATH
+JAR_PATH=/home/pi/vision/grip/grip1.3.0.jar
+GRIP_PATH=/home/pi/vision/grip/project.grip

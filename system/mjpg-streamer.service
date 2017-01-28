@@ -1,0 +1,10 @@
+[Unit]
+Description=MJPG_Streamer
+
+[Service]
+EnvironmentFile=-/etc/default/mjpg-streamer
+ExecStart=/usr/local/bin/mjpg_streamer -o "output_http.so -w /home/pi/vision/mjpg-streamer/mjpg-streamer-experimental/www -p 1180" -i $INPUT
+IgnoreSIGPIPE=false
+KillMode=process
+Restart=on-failure
+RestartSec=5

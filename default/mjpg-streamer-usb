@@ -1,0 +1,6 @@
+v4l2-ctl --set-ctrl brightness=100
+v4l2-ctl --set-ctrl exposure_auto=1
+v4l2-ctl --set-ctrl exposure_absolute=0
+
+LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+INPUT='"input_uvc.so -f 15 -r 320x240 -y -n"'
